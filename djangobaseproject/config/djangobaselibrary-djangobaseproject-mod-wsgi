@@ -1,0 +1,22 @@
+<VirtualHost *:80>
+	ServerName djangobaseproject.cz
+
+	RedirectPermanent / http://www.djangobaseproject.cz/
+</VirtualHost>
+
+# main
+<VirtualHost *:80>
+	ServerName www.djangobaseproject.cz
+
+	DocumentRoot "/var/www/"
+
+	LogLevel warn
+#	CustomLog /var/log/apache2/djangobaseproject.modwsgi.access.log combined
+#	ErrorLog /var/log/apache2/djangobaseproject.modwsgi.error.log
+
+	WSGIScriptAlias / /centrum/djangobaselibrary/djangobaseproject/wsgi/prod.wsgi
+	WSGIDaemonProcess www.djangobaseproject.cz user=www-data group=www-data threads=1 processes=8 display-name=%{GROUP}
+	WSGIProcessGroup www.djangobaseproject.cz
+</VirtualHost>
+
+# vim: set ft=apache:
