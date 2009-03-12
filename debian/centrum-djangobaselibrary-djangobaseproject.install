@@ -1,0 +1,9 @@
+
+build/lib/* centrum/djangobaselibrary
+
+icentrum/config/djangobaselibrary-djangobaseproject-mod-wsgi etc/apache2/sites-available
+
+build/lib/djangobaseproject/bin/* usr/bin
+
+build/lib/djangobaseproject/etc/manage-djangobaselibrary-djangobaseproject etc
+

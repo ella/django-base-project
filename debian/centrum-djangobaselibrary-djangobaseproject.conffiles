@@ -1,0 +1,16 @@
+
+centrum/djangobaselibrary/djangobaseproject/settings/base.py
+centrum/djangobaselibrary/djangobaseproject/settings/config.py
+centrum/djangobaselibrary/djangobaseproject/settings/local.py
+
+centrum/djangobaselibrary/djangobaseproject/urls.py
+
+centrum/djangobaselibrary/djangobaseproject/settings/logger_prod.ini
+centrum/djangobaselibrary/djangobaseproject/settings/logger_devel.ini
+
+centrum/djangobaselibrary/djangobaseproject/wsgi/prod.wsgi
+
+etc/apache2/sites-available/djangobaselibrary-djangobaseproject-mod-wsgi
+
+etc/manage-djangobaselibrary-djangobaseproject
+

@@ -1,0 +1,25 @@
+Source: centrum-djangobaselibrary-djangobaseproject
+Section: apps
+Priority: optional
+Maintainer: 
+Uploaders: 
+Build-Depends: cdbs (>= 0.4.41), debhelper (>= 5.0.37.2), python-dev, python-support (>= 0.3), python-setuptools
+Standards-Version: 3.7.2
+
+# main python package
+Package: centrum-djangobaselibrary-djangobaseproject
+Architecture: all
+Depends: centrum-python-djangobaselibrary, apache2, libapache2-mod-wsgi, memcached, python-mysqldb, python-docutils, centrum-python-memcached, mysql-client
+Description: Django Base Project
+
+# image package
+Package: centrum-djangobaselibrary-djangobaseproject-static
+Architecture: all
+Depends:
+Description: static files for centrum-djangobaselibrary-djangobaseproject
+
+# cron package
+Package: centrum-djangobaselibrary-djangobaseproject-cron
+Architecture: all
+Depends: centrum-djangobaselibrary-djangobaseproject
+Description: cron jobs for centrum-djangobaselibrary-djangobaseproject

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+BASE=djangobaselibrary
+APP=djangobaseproject
+
+APACHE_CONFIG="$BASE-$APP-mod-wsgi"
+APP_DIR="/centrum/$BASE/$APP"
+
+# remove enabled apache site
+a2dissite $APACHE_CONFIG || true
+# reload apache first - because of generating pyco files
+invoke-rc.d apache2 reload
+
+# remove pyco files
+find $APP_DIR -name "*.py[co]" -exec rm -v {} \;
+
+exit 0
+
