@@ -1,1 +1,2 @@
-from djangobaseproject.settings.prod import *
+from djangobaseproject.settings.config import *
+

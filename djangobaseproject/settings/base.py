@@ -1,28 +1,21 @@
 # -*- coding: utf-8 -*-
 
-# Django settings for example_project project.
+# Django base settings for djangobaseproject project.
 
 from os.path import dirname, join
 
-import example_project
+import djangobaseproject
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-DISABLE_CACHE_TEMPLATE = DEBUG # TODO IKY
+
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
-
 MANAGERS = ADMINS
 
-
-DATABASE_ENGINE = 'sqlite3'    # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = '/tmp/example_project.db'             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -35,6 +28,7 @@ TIME_ZONE = 'Europe/Prague'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'cs'
 
+# Site ID
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -43,7 +37,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = join(dirname(example_project.__file__), 'static')
+MEDIA_ROOT = join(dirname(djangobaseproject.__file__), 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -71,7 +65,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'example_project.urls'
+ROOT_URLCONF = 'djangobaseproject.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -80,6 +74,7 @@ TEMPLATE_DIRS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.user',
     'django.core.context_processors.media',
     'django.core.context_processors.request',
 )
@@ -90,3 +85,4 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
 )
+
