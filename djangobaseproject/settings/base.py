@@ -80,6 +80,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 INSTALLED_APPS = (
+    'djangobaselibrary.sample', # base library
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
