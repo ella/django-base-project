@@ -13,16 +13,16 @@ Thus, we're changing module into package:
   * local.py contains (2) for your specific machine. File your defaults there.
 """
 
-from unit_project.settings.base import *
+from djangobaseproject.settings.base import *
 
 # TODO: add if there is some env variable use this instead of config
-from unit_project.settings.config import *
+from djangobaseproject.settings.config import *
 
 # TODO:
 # try to import some settings from /etc/
 
 try:
-    from unit_project.settings.local import *
+    from djangobaseproject.settings.local import *
 except ImportError:
     pass
 
