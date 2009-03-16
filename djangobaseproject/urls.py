@@ -15,7 +15,7 @@ urlpatterns = patterns('',)
 if settings.DEBUG:
     urlpatterns += patterns('',
         # serve static files
-        (r'^static/djangobaseproject/(?P<path>.*)$', 'django.views.static.serve', { 'document_root': join(dirname(djangobaseproject.__file__), 'static'), 'show_indexes': True }),
+        (r'^%s/(?P<path>.*)$' % settings.MEDIA_URL.lstrip('/'), 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     )
 
 urlpatterns += patterns('',
