@@ -80,6 +80,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 INSTALLED_APPS = (
+    'south', # schema migration tool
+
     'djangobaselibrary.sample', # base library
 
     'django.contrib.auth',
