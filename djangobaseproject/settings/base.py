@@ -90,3 +90,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
 )
 
+SOUTH_AUTO_FREEZE_APP = True
+SKIP_SOUTH_TESTS = True
+
