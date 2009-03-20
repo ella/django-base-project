@@ -1,7 +1,7 @@
 
 build/lib/* centrum/djangobaselibrary
 
-icentrum/config/djangobaselibrary-djangobaseproject-mod-wsgi etc/apache2/sites-available
+djangobaseproject/config/djangobaselibrary-djangobaseproject-mod-wsgi etc/apache2/sites-available
 
 build/lib/djangobaseproject/bin/* usr/bin
 
