@@ -1,7 +1,6 @@
 
 centrum/djangobaselibrary/djangobaseproject/settings/base.py
 centrum/djangobaselibrary/djangobaseproject/settings/config.py
-centrum/djangobaselibrary/djangobaseproject/settings/local.py
 
 centrum/djangobaselibrary/djangobaseproject/urls.py
 
