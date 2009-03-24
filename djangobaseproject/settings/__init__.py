@@ -12,15 +12,23 @@ Thus, we're changing module into package:
     runnable on most expected machines
   * local.py contains (2) for your specific machine. File your defaults there.
 """
-
+# load base configuration for whole app
 from djangobaseproject.settings.base import *
 
-# TODO: add if there is some env variable use this instead of config
+# TODO:
+# use some other name than 'config' if there is some env variable?
 from djangobaseproject.settings.config import *
 
-# TODO:
 # try to import some settings from /etc/
+try:
+    import sys
+    sys.path.insert(0, '/etc/djangobaselibrary')
+    from djangobaseproject_config import *
+    del sys.path[0]
+except ImportError:
+    pass
 
+# load any settings for local development
 try:
     from djangobaseproject.settings.local import *
 except ImportError:
