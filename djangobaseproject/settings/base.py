@@ -81,8 +81,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 INSTALLED_APPS = (
+    # internal apps
+    'djangobaseproject.service', # fixtures and so on
     'djangobaselibrary.sample', # base library
 
+    # external apps
+    'django_extensions',
+
+    # core django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
