@@ -71,19 +71,25 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    join(dirname(djangobaseproject.__file__), 'templates'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.user',
     'django.core.context_processors.media',
     'django.core.context_processors.request',
+    'django.core.context_processors.auth',
 )
 
 INSTALLED_APPS = (
-    'south', # schema migration tool
-
+    # internal apps
+    'djangobaseproject.service', # fixtures and so on
     'djangobaselibrary.sample', # base library
 
+    # external apps
+    'django_extensions',
+    'south', # schema migration tool
+
+    # core django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

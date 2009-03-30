@@ -1,7 +1,8 @@
 
+centrum/djangobaselibrary/djangobaseproject/settings/__init__.py
 centrum/djangobaselibrary/djangobaseproject/settings/base.py
 centrum/djangobaselibrary/djangobaseproject/settings/config.py
-centrum/djangobaselibrary/djangobaseproject/settings/local.py
+centrum/djangobaselibrary/djangobaseproject/settings/beta.py
 
 centrum/djangobaselibrary/djangobaseproject/urls.py
 
@@ -12,5 +13,6 @@ centrum/djangobaselibrary/djangobaseproject/wsgi/prod.wsgi
 
 etc/apache2/sites-available/djangobaselibrary-djangobaseproject-mod-wsgi
 
-etc/manage-djangobaselibrary-djangobaseproject
+etc/djangobaselibrary/djangobaseproject_config.py
+etc/djangobaselibrary/manage-djangobaseproject
 

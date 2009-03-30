@@ -1,7 +1,7 @@
 import os, sys
 from os.path import dirname, basename, join
 
-django_settings_module = 'djangobaseproject.settings.prod'
+django_settings_module = 'djangobaseproject.settings'
 pythonpath = [
     join( dirname(__file__), '..', '..' ),
 ]
