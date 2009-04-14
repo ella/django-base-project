@@ -19,7 +19,7 @@ setup(
     author = 'centrum holdings s.r.o', # TODO: REPLACE
     author_email='devel@centrumholdings.com', # TODO: REPLACE
     license = 'BSD', # TODO: REPLACE
-    url='http://git.netcentrum.cz/projects/django/GIT/django-base-project.git/' # TODO: REPLACE
+    url='http://git.netcentrum.cz/projects/django/GIT/django-base-project.git/', # TODO: REPLACE
 
     packages = find_packages(
         where = '.',
@@ -27,7 +27,8 @@ setup(
 
     include_package_data = True,
 
-    classifiers=[ # TODO: REPLACE
+    # TODO: REPLACE
+    classifiers = [
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -36,14 +37,16 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-
-    entry_points={
+    entry_points = {
         'setuptools.file_finders': ['dummy = setuptools_entry:dummylsfiles'],
         # TODO: how to have manage.py executable?
-        'setuptools.installation': ['eggsecutable = djangobaseproject.manage'],
+#        'setuptools.installation': ['eggsecutable = djangobaseproject.manage'],
     },
-
+    setup_requires = [
+#        'setuptools_git', # TODO: add dummy to pypi?
+    ],
     install_requires = [
+        'django',
         'setuptools>=0.6b1',
     ],
 )
