@@ -86,12 +86,13 @@ INSTALLED_APPS = (
     'djangobaselibrary.sample', # base library
 
     # external apps
-    'django_extensions',
+#    'django_extensions',
 
     # core django apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.admin',
 )
 

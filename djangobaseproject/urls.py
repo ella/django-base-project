@@ -27,7 +27,7 @@ urlpatterns += patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    #(r'^admin/(.*)', admin.site.root),
+    (r'^admin/(.*)', admin.site.root),
 
     # simple views from djangobaselibrary.sample app
     (r'^', include('djangobaselibrary.sample.urls')),
