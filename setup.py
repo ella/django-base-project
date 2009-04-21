@@ -1,14 +1,12 @@
 from setuptools import setup, find_packages
 import djangobaseproject
 
-version = "%d.%d.%d" % djangobaseproject.VERSION
-
 # all fields marked with TODO: REPLACE
 # must be filled with some meanigful values
 
 setup(
     name = 'djangobaseproject',
-    version = version,
+    version = djangobaseproject.__versionstr__,
     description = 'Django Base Project', # TODO: REPLACE
     long_description = '\n'.join(( # TODO: REPLACE
         'Django Base Project',
@@ -23,6 +21,7 @@ setup(
 
     packages = find_packages(
         where = '.',
+        exclude = ('docs', 'tests')
     ),
 
     include_package_data = True,
@@ -50,3 +49,4 @@ setup(
         'setuptools>=0.6b1',
     ],
 )
+
