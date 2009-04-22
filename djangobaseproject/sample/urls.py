@@ -1,8 +1,8 @@
 from django.conf.urls.defaults import *
 
-from djangobaselibrary.sample import views
+from djangobaseproject.sample import views
 
 urlpatterns = patterns('',
-    url(r'^$', views.homepage, name='djangobaselibrary-homepage'),
+    url(r'^$', views.homepage, name='djangobaseproject-homepage'),
 )
 
