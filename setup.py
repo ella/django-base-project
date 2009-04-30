@@ -45,7 +45,8 @@ setup(
 #        'setuptools_git', # TODO: add dummy to pypi?
     ],
     install_requires = [
-        'django',
+#        'django',
+#        'djangobaselibrary',
         'setuptools>=0.6b1',
     ],
 )
