@@ -5,7 +5,7 @@ from optparse import make_option
 
 
 class Command(NoArgsCommand):
-    help = 'mypage initial command'
+    help = 'djangobaseproject initial command'
     option_list = NoArgsCommand.option_list + (
         make_option('--noinput', action='store_false', dest='interactive', default=True,
             help='Tells Django to NOT prompt the user for input of any kind.'),

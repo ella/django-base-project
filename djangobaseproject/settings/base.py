@@ -83,7 +83,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 INSTALLED_APPS = (
     # internal apps
     'djangobaseproject.service', # fixtures and so on
-    'djangobaselibrary.sample', # base library
+#    'djangobaselibrary.sample', # sample base library from djangobaselibrary
+    'djangobaseproject.sample', # sample base library but directly in djangobaseproject
 
     # external apps
     'django_extensions',
@@ -94,6 +95,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.admin',
 )
 
 SOUTH_AUTO_FREEZE_APP = True

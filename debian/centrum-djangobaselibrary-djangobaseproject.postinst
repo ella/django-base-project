@@ -16,14 +16,14 @@ case "$1" in
     [[ -f $PYCOMPILE ]] && python $PYCOMPILE $APP_DIR
 
     # enable apache modules
-    a2enmod proxy_http
     a2enmod deflate
     a2enmod alias
 
     # enable mod python site
     a2ensite $APACHE_CONFIG
+
     # reload apache
-    invoke-rc.d apache2 reload
+    # invoke-rc.d apache2 reload
 
     ;;
 
