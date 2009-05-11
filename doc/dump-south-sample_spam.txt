@@ -1,0 +1,4 @@
+BEGIN TRANSACTION;
+CREATE TABLE "sample_spam" ("expires" datetime NOT NULL, "id" integer NOT NULL PRIMARY KEY, "weight" real NOT NULL, "name" varchar(255) NOT NULL, "count" integer NULL);
+CREATE UNIQUE INDEX "sample_spam_name_53cfc279" ON "sample_spam" ("name","expires");
+COMMIT;
