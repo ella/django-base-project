@@ -37,12 +37,11 @@ setup(
         'Framework :: Django',
     ],
     entry_points = {
-        'setuptools.file_finders': ['dummy = setuptools_entry:dummylsfiles'],
         # TODO: how to have manage.py executable?
 #        'setuptools.installation': ['eggsecutable = djangobaseproject.manage'],
     },
     setup_requires = [
-#        'setuptools_git', # TODO: add dummy to pypi?
+        'setuptools_dummy',
     ],
     install_requires = [
 #        'django',
