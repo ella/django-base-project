@@ -2,6 +2,16 @@
 -------------------------------------------------------------
 -------------------------------------------------------------
 
+Tue May 12 13:33:35 CEST 2009
+
+* vyresit jak to delat s ruznyma enviromentama
+  prod vs. beta, atd..
+  dulezity totiz je, ze chci mit nainstalovany
+  najednou betu i prod treba i na jednom stroji
+
+
+-------------------------------------------------------------
+
 Thu Apr 23 13:15:51 CEST 2009
 
 * zavislost na django mrvi dpkg-build
