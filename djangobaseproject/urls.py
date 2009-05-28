@@ -30,8 +30,8 @@ urlpatterns += patterns('',
     (r'^admin/(.*)', admin.site.root),
 
     # simple views from djangobaselibrary.sample app
-    (r'^', include('djangobaselibrary.sample.urls')),
+#    (r'^', include('djangobaselibrary.sample.urls')),
     # simple views from djangobaseproject.sample app
-#    (r'^', include('djangobaseproject.sample.urls')),
+    (r'^', include('djangobaseproject.sample.urls')),
 )
 
