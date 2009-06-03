@@ -1,12 +1,17 @@
 from setuptools import setup, find_packages
-import djangobaseproject
 
 # all fields marked with TODO: REPLACE
 # must be filled with some meanigful values
 
+# must be in sync with djangobaseproject.VERSION
+VERSION = (0, 0, 0)
+__version__ = VERSION
+__versionstr__ = '.'.join(map(str, VERSION))
+
+
 setup(
     name = 'djangobaseproject',
-    version = djangobaseproject.__versionstr__,
+    version = __versionstr__,
     description = 'Django Base Project', # TODO: REPLACE
     long_description = '\n'.join(( # TODO: REPLACE
         'Django Base Project',
