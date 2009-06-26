@@ -50,6 +50,7 @@ setup(
     ],
     install_requires = [
 #        'django',
+#        'south',
 #        'djangobaselibrary',
         'setuptools>=0.6b1',
     ],

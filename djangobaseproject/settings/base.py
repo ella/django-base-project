@@ -87,8 +87,8 @@ INSTALLED_APPS = (
     'djangobaseproject.sample', # sample base library but directly in djangobaseproject
 
     # external apps
-#    'django_extensions',
-#    'south', # schema migration tool
+    'django_extensions',
+    'south', # schema migration tool
 
     # core django apps
     'django.contrib.auth',
