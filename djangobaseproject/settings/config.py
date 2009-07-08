@@ -4,6 +4,7 @@ from os.path import join
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+ENABLE_DEBUG_URLS = DEBUG
 
 
 DATABASE_ENGINE = 'sqlite3'
