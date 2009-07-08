@@ -1,18 +1,13 @@
-from os.path import dirname, join
-
 from django.conf.urls.defaults import *
 from django.conf import settings
 from django.contrib import admin
-
-import djangobaseproject
-
 
 admin.autodiscover()
 
 
 urlpatterns = patterns('',)
 
-if settings.DEBUG:
+if getattr(settings, "ENABLE_DEBUG_URLS", None):
     urlpatterns += patterns('',
         # serve static files
         (r'^%s/(?P<path>.*)$' % settings.MEDIA_URL.lstrip('/'), 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
