@@ -7,10 +7,6 @@ from os.path import dirname, join
 import djangobaseproject
 
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
-
-
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
@@ -48,9 +44,6 @@ MEDIA_URL = '/static/djangobaseproject'
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/static/admin_media/'
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '^980$0s46q1(toq*mu23m41_ac_@vwy)+mig=ka_97$m0^fh)v'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
