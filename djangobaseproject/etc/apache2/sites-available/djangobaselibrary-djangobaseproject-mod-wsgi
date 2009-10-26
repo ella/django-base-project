@@ -1,0 +1,53 @@
+<VirtualHost *:80>
+	ServerName djangobaseproject.cz
+	ServerAlias www.djangobaseproject.cz
+
+	ServerAlias www.djangobaseproject.centrum.cz
+
+	RedirectPermanent / http://djangobaseproject.centrum.cz/
+</VirtualHost>
+
+# main
+<VirtualHost *:80>
+	ServerName www.djangobaseproject.centrum.cz
+	ServerAlias beta.djangobaseproject.centrum.cz
+
+	ServerAlias djangobaseproject.*
+
+	DocumentRoot "/var/www/"
+
+	LogLevel warn
+#	CustomLog /var/log/apache2/djangobaseproject.modwsgi.access.log combined
+#	ErrorLog /var/log/apache2/djangobaseproject.modwsgi.error.log
+
+	# static files
+	Alias /static/djangobaseproject /centrum/djangobaselibrary/djangobaseproject/static
+
+	WSGIScriptAlias / /centrum/djangobaselibrary/djangobaseproject/index.wsgi
+	WSGIDaemonProcess djangobaseproject.centrum.cz user=www-data group=www-data threads=1 processes=4 display-name=%{GROUP}
+	WSGIProcessGroup djangobaseproject.centrum.cz
+
+	<Location "/js/mod_uri.js">
+		Sethandler mod_uri.js
+	</Location>
+
+	<IfModule auth_ego_module>
+		<Location />
+			AuthType Ego
+			AuthName "Ego"
+		</Location>
+
+		Include /etc/apache2/sites-available/sso.conf
+	</IfModule>
+
+	<IfModule uri_module>
+		IncludeIdentityNamespace user.centrum.cz
+		IncludeIdentityNamespace mail.centrum.cz
+		# Mapping uri extension token ;sid=? to environment variable EGO_SESS_SID
+		AddIdentityInput sid EGO_SESS_ID
+		AddIdentityOutput EGO_SESS_ID sid
+	</IfModule>
+
+</VirtualHost>
+
+# vim: set ft=apache:

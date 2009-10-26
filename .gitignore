@@ -1,2 +1,4 @@
 *.py[co]
+.*.sw?
+/djangobaseproject/settings/local.py
 

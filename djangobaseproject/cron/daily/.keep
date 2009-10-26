@@ -1,0 +1,6 @@
+content of this directory is executed via run-parts(8)
+
+files must be executable (chmod 755 myfile), must containt proper shebang (like: #!/bin/sh)
+
+names must consist entirely of upper and lower case letters, digits, underscores, and hyphens
+
