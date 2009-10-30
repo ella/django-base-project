@@ -1,6 +1,8 @@
 from tempfile import gettempdir
 from os.path import dirname, join
 
+import djangobaseproject
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 ENABLE_DEBUG_URLS = DEBUG
