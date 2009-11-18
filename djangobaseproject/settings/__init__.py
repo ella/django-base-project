@@ -23,14 +23,14 @@ from djangobaseproject.settings.base import *
 from djangobaseproject.settings.config import *
 
 # try to import some settings from /etc/
+import sys
+sys.path.insert(0, '/etc/djangobaselibrary')
 try:
-    import sys
-    sys.path.insert(0, '/etc/djangobaselibrary')
     from djangobaselibrary_config import *
     from djangobaseproject_config import *
-    del sys.path[0]
 except ImportError:
     pass
+del sys.path[0]
 
 # load any settings for local development
 try:
