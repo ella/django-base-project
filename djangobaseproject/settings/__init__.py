@@ -38,7 +38,7 @@ try:
 except ImportError:
     pass
 
-import logging.config
 if LOGGING_CONFIG_FILE:
+    import logging.config
     logging.config.fileConfig(LOGGING_CONFIG_FILE)
 
