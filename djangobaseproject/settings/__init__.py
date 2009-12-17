@@ -27,6 +27,9 @@ import sys
 sys.path.insert(0, '/etc/djangobaselibrary')
 try:
     from djangobaselibrary_config import *
+except ImportError:
+    pass
+try:
     from djangobaseproject_config import *
 except ImportError:
     pass
