@@ -22,13 +22,11 @@ DATABASE_OPTIONS = {
 MEDIA_URL = '%s/djangobaseproject' % djangobaselibrary_meta.MEDIA_URL
 ADMIN_MEDIA_PREFIX = 'http://i0.cz/django/centrum/admin_media/'
 
-MIDDLEWARE_CLASSES = (
-    'djangobaselibrary.legacy.middleware.RedirectLegacyOldPage',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.http.SetRemoteAddrFromForwardedFor',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'djangobaselibrary.middleware.ModEgoMiddleware',
-)
+from djangobaseproject.base import MIDDLEWARE_CLASSES
+MIDDLEWARE_CLASSES = list(MIDDLEWARE_CLASSES)
+auth_middleware_index = MIDDLEWARE_CLASSES.index('django.contrib.auth.middleware.AuthenticationMiddleware')
+#MIDDLEWARE_CLASSES[auth_middleware_index] = 'ego.middleware.ModEgoMiddleware' # add your own production auth middleware
+MIDDLEWARE_CLASSES = tule(MIDDLEWARE_CLASSES)
 
 CACHE_BACKEND = 'memcached://%s/' % ';'.join((
     'djfe1.cent:11211',
@@ -38,13 +36,6 @@ CACHE_BACKEND = 'memcached://%s/' % ';'.join((
 ))
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.media',
-    'djangobaselibrary.context_processors.auth',
-    'django.core.context_processors.request',
-    'djangobaselibrary.context_processors.djangobaselibrary',
-)
 
 SESSION_COOKIE_DOMAIN = '.centrum.cz'
 
