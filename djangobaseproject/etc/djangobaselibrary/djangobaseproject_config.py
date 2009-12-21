@@ -1,4 +1,5 @@
-import os import djangobaselibrary_meta
+import os
+import djangobaselibrary_meta
 
 LOGGING_CONFIG_FILE = '/etc/djangobaselibrary/djangobaseproject_logging.ini'
 
