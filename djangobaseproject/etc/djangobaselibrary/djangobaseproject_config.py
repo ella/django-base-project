@@ -22,11 +22,11 @@ DATABASE_OPTIONS = {
 MEDIA_URL = '%s/djangobaseproject' % djangobaselibrary_meta.MEDIA_URL
 ADMIN_MEDIA_PREFIX = 'http://i0.cz/django/centrum/admin_media/'
 
-from djangobaseproject.base import MIDDLEWARE_CLASSES
+from djangobaseproject.settings.base import MIDDLEWARE_CLASSES
 MIDDLEWARE_CLASSES = list(MIDDLEWARE_CLASSES)
 auth_middleware_index = MIDDLEWARE_CLASSES.index('django.contrib.auth.middleware.AuthenticationMiddleware')
 #MIDDLEWARE_CLASSES[auth_middleware_index] = 'ego.middleware.ModEgoMiddleware' # add your own production auth middleware
-MIDDLEWARE_CLASSES = tule(MIDDLEWARE_CLASSES)
+MIDDLEWARE_CLASSES = tuple(MIDDLEWARE_CLASSES)
 
 CACHE_BACKEND = 'memcached://%s/' % ';'.join((
     'djfe1.cent:11211',
